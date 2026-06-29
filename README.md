@@ -41,7 +41,14 @@ The notebook evaluates both models using:
 - Sample prediction visualizations on test images
 
 ## Results
-The notebook reports that EfficientNetB3 performs better than ResNet50 on this task, with EfficientNetB3 achieving around 97% accuracy and ResNet50 achieving around 92% accuracy.
+Based on the evaluation in the notebook, EfficientNetB3 performed slightly better than ResNet50 on this task.
+
+| Model | Accuracy | Precision | Recall | F1-score |
+| --- | ---: | ---: | ---: | ---: |
+| EfficientNetB3 | 0.9380 | 0.9502 | 0.9380 | 0.9369 |
+| ResNet50 | 0.9260 | 0.9429 | 0.9260 | 0.9240 |
+
+These scores were calculated using macro averaging for precision, recall, and F1-score.
 
 <img width="1661" height="1597" alt="image" src="https://github.com/user-attachments/assets/cfe5e996-d3c0-4e56-b35f-84798edee939" />
 
