@@ -1,0 +1,51 @@
+{%extends "navbar_and_footer.html"%}
+{% block content %}
+<section class="about" >
+    <div class="container p-5 border rounded" style="background-color: rgba(33, 37, 41, 0.6);">
+        <div class="d-flex gap-2 align-items-center justify-content-center title">
+            <img src="static/icon.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+            <h2 class="doto"><b>ButterflyOracle</b></h2>
+        </div>
+        <div>
+                      <p>
+                ButterflyOracle adalah aplikasi web yang inovatif dan dirancang khusus untuk memfasilitasi identifikasi serta
+                klasifikasi spesies kupu-kupu dan ngengat. Melalui kemajuan teknologi pembelajaran mesin, aplikasi ini memberikan
+                kemampuan kepada pengguna untuk mengenali berbagai jenis kupu-kupu dan ngengat hanya dengan mengunggah gambar spesimen
+                tersebut. Kami memahami bahwa dunia serangga, khususnya kupu-kupu dan ngengat, memiliki keanekaragaman yang luar biasa
+                dan nilai ekologis yang tinggi. Oleh karena itu, ButterflyOracle hadir sebagai alat yang dapat membantu para peneliti,
+                pecinta alam, dan masyarakat umum dalam memahami lebih dalam mengenai spesies-spesies ini. 
+            </p>
+            <p>
+                
+                Aplikasi ButterflyOracle didukung oleh model deep learning EfficientNetB3, yang dikenal dengan kemampuan pemrosesan
+                visual yang sangat baik, terutama dalam klasifikasi gambar. Model ini dilatih menggunakan dataset "Butterfly & Moths
+                Image Classification 100 species" yang tersedia di Kaggle dan disusun oleh Gerry. Dataset ini memiliki tiga bagian
+                direktori, yaitu train, validation, dan test, dengan jumlah gambar yang terstruktur secara sistematis: direktori train
+                berisi 12.594 gambar yang terbagi dalam 100 kelas, sedangkan direktori test dan validation masing-masing berisi 500
+                gambar yang juga terbagi dalam 100 kelas, dengan setiap kelas terdiri dari 5 gambar. Struktur dataset ini memungkinkan
+                model untuk dilatih dan diuji secara mendalam, sehingga mampu menghasilkan akurasi tinggi sebesar 93% dalam klasifikasi
+                spesies kupu-kupu dan ngengat.
+            </p>
+            <p>
+                Dengan arsitektur EfficientNetB3 yang dirancang untuk efisiensi dan akurat, model ini mampu mengenali pola unik pada
+                gambar setiap spesies. Kombinasi dataset yang kaya dan model yang kompleks ini memberikan hasil klasifikasi yang tepat
+                dalam waktu singkat, sehingga memudahkan pengguna dalam memperoleh identifikasi spesies yang akurat.
+            </p>
+            <p>
+                Selain itu, ButterflyOracle didesain dengan antarmuka yang ramah pengguna sehingga mudah diakses oleh siapa saja, dari
+                peneliti profesional hingga pemula yang baru mengenal dunia serangga. Kami berharap bahwa ButterflyOracle dapat
+                berkontribusi dalam upaya pelestarian dan penghargaan terhadap biodiversitas, terutama mengingat pentingnya kupu-kupu
+                dan ngengat dalam menjaga keseimbangan ekosistem. Kehadiran aplikasi ini diharapkan dapat memotivasi masyarakat untuk
+                lebih peduli terhadap alam, sekaligus memudahkan para peneliti dalam melanjutkan studi mereka di bidang entomologi.
+            </p>
+            <p>
+                Kami berterima kasih atas kepercayaan yang diberikan untuk menggunakan ButterflyOracle. Kami berkomitmen untuk terus
+                mengembangkan aplikasi ini, baik dalam akurasi maupun fungsionalitas, sehingga mampu menjawab kebutuhan identifikasi
+                spesies yang semakin kompleks di masa depan.
+            </p>
+        </div>
+
+        <p></p>
+    </div>
+</section>
+{% endblock %}

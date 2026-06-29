@@ -1,0 +1,53 @@
+{%extends "navbar_and_footer.html"%}
+{% block content %}
+    <section>
+        <form class="container" action="{{url_for('predict')}}" method="POST" enctype="multipart/form-data" >
+            <div class="d-flex justify-content-center align-items-center mt-5">
+                <div class="col-md-7 bg-card border p-4">        
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <img src="static/icon.png" alt="" srcset="" width="50" height="50">
+        
+                        <h2 class="doto">ButterflyOracle</h2>
+                        <p class="montserrat text-center">Temukan Keindahan Alam yang Tersembunyi <br> Kenali Setiap Jenis Kupu-Kupu dengan ButterflyOracle!</p>
+                        <img id="preview" src="#" alt="Pratinjau Gambar" style="display: none; max-width: 300px; max-height: 300px;" class="mb-2">
+                        <img src="static/upload.png" alt="" id="upload" width="200px">
+
+                        <input type="file" id="fileInput" accept="image/*" onchange="tampilkanGambar(event)" class="form-control montserrat" name="image" required>
+                        <p class="montserrat mt-2" style="width: 80%;"><b>Note:</b> Untuk memastikan hasil maksimal usahakan kupu-kupu atau ngengat terlihat besar, jelas, dan berada di tengah gambar.</p>
+
+                        <button type="submit" class="btn btn-success montserrat"><b>Predict</b></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    {%if show_result == True %}
+        <section class="">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <div class="col-md-7 bg-card border p-4 ">
+                        <p class="montserrat text-center"><b>Perhatian, Hasil Prediksi Tidak Bisa Menjadi Acuan Kebenaran Yang Mutlak</b></p>
+                        <div class="input-gambar row justify-content-center">
+                            <h5 class="text-center montserrat">Input Image</h5>
+                            <img src="{{ url_for('uploaded_file', filename=namafile) }}" style="width: 250px; height: 250px;"class="mb-2">
+                        </div>
+                        <div class="input-gambar row justify-content-center mt-3">
+                            <h5 class="text-center montserrat">Predicted Result</h5>
+                            <img src="static/Gambar Kupu-Kupu/{{class_name}}_1.jpg" style="width: 200px; height: 200px;" class="mb-2">
+                            <img src="static/Gambar Kupu-Kupu/{{class_name}}_2.jpg" style="width: 200px; height: 200px;" class="mb-2">
+                        </div>
+                        <div class="hasil-prediksi text-center">
+                            <h4 class="montserrat">Hasil Prediksi:</h4>
+                            <p class="montserrat">
+                                {{class_name}}, {{probability}}%
+                            </p>
+                            <p class="montserrat">
+                                {{detail}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {%endif%}
+{% endblock %}
