@@ -41,6 +41,9 @@ The notebook evaluates both models using:
 ## Results
 The notebook reports that EfficientNetB3 performs better than ResNet50 on this task, with EfficientNetB3 achieving around 97% accuracy and ResNet50 achieving around 92% accuracy.
 
+<img width="1661" height="1597" alt="image" src="https://github.com/user-attachments/assets/cfe5e996-d3c0-4e56-b35f-84798edee939" />
+
+
 ## Output Files
 The notebook saves:
 - `best_butterflye3.h5` for the EfficientNetB3 model
