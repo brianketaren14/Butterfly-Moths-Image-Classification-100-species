@@ -3,8 +3,10 @@
 ## Project Overview
 This project is a multi-class image classification task to identify butterfly and moth species. It uses a dataset containing 100 species classes and trains deep learning models to recognize each species from input images.
 
-## Dataset
-The dataset is organized into separate folders for training, validation, and testing. It also includes a CSV file named `butterflies and moths.csv` that describes image metadata and dataset splits.
+## Website
+This project use flask to integrate between ui and the model.
+<img width="1910" height="2147" alt="image" src="https://github.com/user-attachments/assets/2583a968-370f-4055-b8fa-96bf070c9fbc" />
+
 
 ## Approach
 This project uses convolutional neural networks (CNNs) with transfer learning. Two pretrained models are used as feature extractors:
